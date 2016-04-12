@@ -50,6 +50,9 @@ var svg = d3.select(".chart").append("svg")
 //WHERE THE DATA IS LOADED
 
 d3.csv("unemployment.csv", type, function(error, data) {
+
+  console.log(data);
+
   if (error) throw error;
   
 //LOCAL VARIABLES HERE
@@ -72,8 +75,21 @@ d3.csv("unemployment.csv", type, function(error, data) {
 //                 data[i].Year = parseYear(data[i].Year);
 //             }
     
+
+
+    
+    /* ----------------- */
+    // Set your domains for time and values here.
+    // Use the line chart example as your guide.
+    // Don't use what you've commented out above. It won't work!!
+    // Time domain is an array of two values: earliest and latest date.
+    // Values domain is an array of two values: lowest and highest values.
+    /* ----------------- */
+
+    // var timeDomain = --> Your work here.
+    // var valueDomain = --> Your work here.
+
     x.domain(Year).nice();
- 	
     y.domain(unemploymentRate).nice();
 
 
@@ -103,14 +119,14 @@ d3.csv("unemployment.csv", type, function(error, data) {
       .attr("d", line);
 })
 
-// function type(d) {
-//   d.observation_date = formatDate.parse(d.observation_date);
-//   d.CLMUR = +d.CLMUR;
-//   return d;
-// }
-
 function type(d) {
-  d.date = formatDate.parse(d.date);
-  d.close = +d.close;
+  d.observation_date = formatDate.parse(d.observation_date);
+  d.CLMUR = +d.CLMUR;
   return d;
 }
+
+// function type(d) {
+//   d.date = formatDate.parse(d.date);
+//   d.close = +d.close;
+//   return d;
+// }

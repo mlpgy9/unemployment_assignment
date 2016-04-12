@@ -1,13 +1,3 @@
-FRED Graph Observations,
-Federal Reserve Economic Data,
-Link: https://research.stlouisfed.org/fred2,
-Help: https://research.stlouisfed.org/fred2/help-faq,
-Economic Research Division,
-Federal Reserve Bank of St. Louis,
-,
-CLMUR,"Unemployment Rate in Columbia, MO (MSA), Percent, Monthly, Smoothed Seasonally Adjusted"
-,
-Frequency: Monthly,
 observation_date,CLMUR
 1990-01-01,3.8
 1990-02-01,3.7
